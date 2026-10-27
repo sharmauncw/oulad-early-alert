@@ -1,0 +1,50 @@
+{
+  "files": {
+    "courses.csv": {
+      "actual_rows": 22,
+      "documented_rows": 22,
+      "documented_source": "course-presentations, OULAD.names s.5",
+      "exact_match": true
+    },
+    "assessments.csv": {
+      "actual_rows": 206,
+      "documented_rows": 206,
+      "documented_source": "assessments, OULAD.names s.5",
+      "exact_match": true
+    },
+    "vle.csv": {
+      "actual_rows": 6364,
+      "documented_rows": 6364,
+      "documented_source": "VLE pages, OULAD.names s.5",
+      "exact_match": true
+    },
+    "studentInfo.csv": {
+      "actual_rows": 32593,
+      "documented_rows": 32953,
+      "documented_source": "students in courses, OULAD.names s.5 (but s.9 class distribution sums to 32,593)",
+      "exact_match": false
+    },
+    "studentRegistration.csv": {
+      "actual_rows": 32593,
+      "documented_rows": 32953,
+      "documented_source": "registration entries, OULAD.names s.5 (but s.9 implies 32,593)",
+      "exact_match": false
+    },
+    "studentAssessment.csv": {
+      "actual_rows": 173912,
+      "documented_rows": 173912,
+      "documented_source": "assessment entries, OULAD.names s.5",
+      "exact_match": true
+    },
+    "studentVle.csv": {
+      "actual_rows": 10655280,
+      "documented_rows": 10655280,
+      "documented_source": "VLE log entries, OULAD.names s.5",
+      "exact_match": true
+    }
+  },
+  "notes": [
+    "OULAD.names s.5 lists 32,953 students/registrations, but its own s.9 class distribution (Distinction 3,024 + Fail 7,052 + Pass 12,361 + Withdrawn 10,156) sums to 32,593 -- which is exactly the row count of both studentInfo.csv and studentRegistration.csv in the release. Verdict: 32,953 in s.5 is a documentation typo; the files match the documentation's own class distribution.",
+    "Some secondary sources quote different counts (assessments 196, vle 6,365, studentAssessment 173,740, studentVle truncated to 1,048,575 rows in spreadsheet exports). None of those match this release; the bundled documentation does, on every file."
+  ]
+}

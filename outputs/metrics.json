@@ -1,0 +1,173 @@
+{
+  "cohort": {
+    "registrations_total": 32593,
+    "outcome_counts": {
+      "Pass": 12361,
+      "Withdrawn": 10156,
+      "Fail": 7052,
+      "Distinction": 3024
+    },
+    "modules": [
+      "AAA",
+      "BBB",
+      "CCC",
+      "DDD",
+      "EEE",
+      "FFF",
+      "GGG"
+    ],
+    "presentations": [
+      "2013B",
+      "2013J",
+      "2014B",
+      "2014J"
+    ],
+    "at_risk_rate_all": 0.528
+  },
+  "early_withdrawal": {
+    "withdrawn_total": 10156,
+    "withdrawn_by_day_14": 4457,
+    "share_of_withdrawals_by_day_14": 0.4389,
+    "withdrawn_before_day_0": 2676,
+    "total_excluded_from_prediction_cohort": 4465,
+    "note": "Exclusions are all registrations with date_unregistration <= 13: 4,457 Withdrawn plus 8 recorded as Fail who also unregistered by day 14 (a coding quirk in the source)."
+  },
+  "prediction_cohort": {
+    "n": 28128,
+    "at_risk_n": 12743,
+    "at_risk_rate": 0.453
+  },
+  "assessment_signal": {
+    "share_with_submission_by_day_14": 0.124,
+    "median_first_assessment_due_day": 21.5
+  },
+  "engagement_by_outcome": [
+    {
+      "final_result": "Distinction",
+      "n": 3024,
+      "median_clicks_14d": 144.0,
+      "median_active_days_14d": 7.0,
+      "share_zero_activity": 0.034
+    },
+    {
+      "final_result": "Fail",
+      "n": 7044,
+      "median_clicks_14d": 37.0,
+      "median_active_days_14d": 3.0,
+      "share_zero_activity": 0.173
+    },
+    {
+      "final_result": "Pass",
+      "n": 12361,
+      "median_clicks_14d": 97.0,
+      "median_active_days_14d": 5.0,
+      "share_zero_activity": 0.054
+    },
+    {
+      "final_result": "Withdrawn",
+      "n": 5699,
+      "median_clicks_14d": 51.0,
+      "median_active_days_14d": 4.0,
+      "share_zero_activity": 0.136
+    }
+  ],
+  "zero_activity": {
+    "share_of_prediction_cohort": 0.0982,
+    "at_risk_rate_zero_activity": 0.723,
+    "at_risk_rate_any_activity": 0.4236,
+    "risk_ratio": 1.707
+  },
+  "prev_attempts": {
+    "at_risk_rate_no_prev_attempt": 0.43,
+    "at_risk_rate_with_prev_attempt": 0.6121,
+    "share_with_prev_attempt": 0.1265
+  },
+  "split": {
+    "train_presentations": [
+      "2013B",
+      "2013J"
+    ],
+    "test_presentations": [
+      "2014B",
+      "2014J"
+    ],
+    "train_n": 12096,
+    "test_n": 16032,
+    "test_at_risk_rate": 0.4502
+  },
+  "model_test": {
+    "auc": 0.7038,
+    "threshold": 0.5,
+    "tp": 3782,
+    "fp": 2074,
+    "tn": 6741,
+    "fn": 3435,
+    "sensitivity": 0.524,
+    "specificity": 0.7647,
+    "precision": 0.6458,
+    "flag_rate_at_threshold": 0.3653,
+    "sensitivity_flagging_top_20pct": 0.3127
+  },
+  "rule_zero_activity_test": {
+    "tp": 1037,
+    "fp": 410,
+    "tn": 8405,
+    "fn": 6180,
+    "sensitivity": 0.1437,
+    "specificity": 0.9535,
+    "precision": 0.7167,
+    "flag_rate": 0.0903
+  },
+  "model_vle_only_test": {
+    "auc": 0.6586,
+    "features": [
+      "clicks_14d",
+      "active_days_14d",
+      "resources_14d",
+      "clicks_per_active_day",
+      "no_vle_activity_14d"
+    ]
+  },
+  "top_coefficients": [
+    {
+      "feature": "code_module_GGG",
+      "coef": -0.833
+    },
+    {
+      "feature": "active_days_14d",
+      "coef": -0.738
+    },
+    {
+      "feature": "code_module_DDD",
+      "coef": 0.684
+    },
+    {
+      "feature": "highest_education_No Formal quals",
+      "coef": 0.61
+    },
+    {
+      "feature": "imd_band_Missing",
+      "coef": -0.584
+    },
+    {
+      "feature": "imd_band_0-10%",
+      "coef": 0.575
+    },
+    {
+      "feature": "code_module_FFF",
+      "coef": 0.566
+    },
+    {
+      "feature": "highest_education_HE Qualification",
+      "coef": -0.434
+    },
+    {
+      "feature": "highest_education_A Level or Equivalent",
+      "coef": -0.401
+    },
+    {
+      "feature": "imd_band_10-20",
+      "coef": 0.356
+    }
+  ]
+}
